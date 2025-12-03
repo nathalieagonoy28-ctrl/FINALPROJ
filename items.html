@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/items.css">
+    <title>Items</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="navbar">
+    <div class="logo">
+      <img src="./logo img/RFh9slqW.jpg" alt="crusina Logo" class="logo-img" />
+        CocoCrafts
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="items.html">Items</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav-login">
+      <label for="login-toggle" class="login-nav-btn">Login</label>
+    </div>
+  </div>
+  
+  <input type="checkbox" id="login-toggle" hidden>
+  <div class="login-popup">
+    <div class="login-container">
+      <div class="login-card-popup">
+        <label for="login-toggle" class="close-btn">×</label>
+        <h2>LOGIN</h2>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <a href="home.html" class="popup-login-btn">LOGIN</a>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+        
+      <div class="login-side-panel">
+        <h3>Don't<br>have<br>an<br>account?</h3>
+        <p>“Be part of our <br> creative community!”</p>
+        <a href="register.html" class="register-side-btn">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="center">
+    <div class="heading-with-image"></div>
+    <h1>OUR ITEMS</h1>
+    <h2>Coco Crafts</h2>
+  </div>
+
+  <div class="horizontal-gallery">
+    <img src="./images/4.jpg" data-title="₱600.00" data-desc="Coco table lamp" onclick="openLightbox(this)">
+    <img src="./images/6.jpg" data-title="₱80.00" data-desc="Coco coin purse" onclick="openLightbox(this)">
+    <img src="./images/star.jpg" data-title="₱850.00" data-desc="Coco star lamp" onclick="openLightbox(this)">
+    <img src="./images/2.jpg" data-title="₱100.00" data-desc="Ladle small(serving spoon)" onclick="openLightbox(this)">
+    <img src="./images/3.jpg" data-title="₱5000.00" data-desc="Coco chandelier" onclick="openLightbox(this)">
+    <img src="./images/7.jpg" data-title="3 for ₱100" data-desc="Coco Keychains" onclick="openLightbox(this)">
+    <img src="./images/8.jpg" data-title="₱350.00" data-desc="Coco bottle pump" onclick="openLightbox(this)">
+    <img src="./images/9.jpg" data-title="₱60.00" data-desc="Soad holder" onclick="openLightbox(this)">
+    <img src="./images/cup.jpg" data-title="₱150.00, ₱500.00"  data-desc="Coco mug, Coco tea pot" onclick="openLightbox(this)">
+    <img src="./images/leave.jpg" data-title="6pcs for ₱150.00" data-desc="Coco petals " onclick="openLightbox(this)">
+    <img src="./images/neck.jpg" data-title="₱180.00" data-desc="Coco Lei" onclick="openLightbox(this)">
+    <img src="./images/cocoearings.jpg" data-title="₱100.00" data-desc="Coco earing" onclick="openLightbox(this)">
+    <img src="./images/cocoplate.jpg" data-title="₱ 130.00" data-desc="Coco rice bowl" onclick="openLightbox(this)">
+    <img src="./images/cocospoon.jpg" data-title="₱ 60.00" data-desc="Coco Spoon" onclick="openLightbox(this)">
+    <img src="./images/hanginglantern.jpg" data-title="₱3500.00" data-desc="Coco spiral light" onclick="openLightbox(this)">
+    <img src="./images/paso.jpg" data-title="₱₱200.00" data-desc="Coco planter" onclick="openLightbox(this)">
+    <img src="./images/spider.jpg" data-title="₱2000.00" data-desc="Coco spider wall decor" onclick="openLightbox(this)">
+    <img src="./images/windchain.jpg" data-title="₱300.00" data-desc="Coco wind chime" onclick="openLightbox(this)">
+    <img src="./images/482273506_1332426214845348_6420765179015714557_n_002.jpg" data-title="₱ 350.00" data-desc="Coco Coin bank" onclick="openLightbox(this)">
+    <img src="./images/17.jpg" data-title="₱150.00" data-desc="Coco frying ladle" onclick="openLightbox(this)">
+  </div>
+
+
+  <div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img">
+    <h2 id="lightbox-title"></h2>
+    <p id="lightbox-desc"></p>
+  </div>
+
+  <script>
+  function openLightbox(img) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = img.src;
+    document.getElementById("lightbox-title").innerText = img.dataset.title;
+    document.getElementById("lightbox-desc").innerText = img.dataset.desc;
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+  </script>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box about">
+        <h3>CRUSINA’S HANDICRAFTS</h3>
+        <p>
+          Crusina’s Handicrafts creates eco-friendly bags made from recycled coconut shells. Each product is handcrafted with care to promote sustainability, Filipino craftsmanship, and environmental responsibility.
+        </p>
+      </div>
+
+      <div class="footer-box">
+        <img src="./logo img/medal.png" alt="Handcrafted Quality">
+        <h4>HANDCRAFTED QUALITY</h4>
+        <p>
+         Every bag is carefully handmade using natural materials to ensure durability, beauty, and uniqueness.
+        </p>
+      </div>
+
+    
+      <div class="footer-box">
+        <img src="./logo img/recycle.png" alt="Eco Friendly">
+        <h4>ECO-FRIENDLY MATERIALS</h4>
+        <p>
+          We use recycled coconut shells and local fabrics to reduce waste and protect our environment.
+        </p>
+      </div>
+
+    
+      <div class="footer-box">
+        <img src="./logo img/call-center.png" alt="Customer Support">
+        <h4>TRUSTED SERVICE</h4>
+        <p>
+         We ensure quality products and customer satisfaction in every order you make with us.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Crusina’s Handicrafts. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

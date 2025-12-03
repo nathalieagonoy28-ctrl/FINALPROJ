@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/about.css">
+    <title>About</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="background"></div>
+  <div class="navbar">
+    <div class="logo">
+      <img src="./logo img/RFh9slqW.jpg" alt="crusina Logo" class="logo-img" />
+        CocoCrafts
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="items.html">Items</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav-login">
+      <label for="login-toggle" class="login-nav-btn">Login</label>
+    </div>
+  </div>
+  
+  <input type="checkbox" id="login-toggle" hidden>
+  <div class="login-popup">
+    <div class="login-container">
+      <div class="login-card-popup">
+        <label for="login-toggle" class="close-btn">×</label>
+        <h2>LOGIN</h2>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <a href="home.html" class="popup-login-btn">LOGIN</a>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+        
+      <div class="login-side-panel">
+        <h3>Don't<br>have<br>an<br>account?</h3>
+        <p>“Be part of our <br> creative community!”</p>
+        <a href="register.html" class="register-side-btn">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="center">
+    <div class="heading-with-image"></div>
+      <h1>ABOUT US</h1>
+      <p>Crusina’s Handicrafts, owned and managed by Juvelyn Pacete Crusina, is a sole proprietorship focused on creating eco-friendly bags made from recycled coconut shells. The business aims to contribute to environmental preservation by promoting sustainable fashion while reducing waste from coconut shell disposal. Crusina’s Handicrafts offers stylish, durable, and sustainable bags, highlighting the natural beauty of coconut shells in modern designs.</p>
+  </div>
+    
+  <section class="about-me">
+    <div class="container">
+      <div class="top-profiles">
+        <div class="profile-box">
+          <img src="logo img/kTZYYDIk.jpg" alt="Owner" class="profile-photo">
+          <h3>Reden Crusina</h3>
+          <p></p>
+        </div>
+        <div class="profile-box">
+          <img src="logo img/b8diNMLP.jpg" alt="Team Member" class="profile-photo">
+          <h3>Juvelyn Pacete Crusina</h3>
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="right-content">
+        <h1>ABOUT THE TEAM</h1>
+        <p>
+          The core team behind Crusina’s Handicrafts is led by myself, Juvelyn Pacete Crusina, as the owner and artisan. I am responsible for the entire creative process, from designing the bags to handcrafting each piece using coconut shells, Ilocos Abel fabric, and other materials. My role also involves overseeing production, ensuring quality control, and managing day-to-day operations. As the visionary behind the business, I make sure that every product aligns with our commitment to sustainability and Filipino craftsmanship. And also, My family plays an important role as my support system. They are always there when I feel hopeless or exhausted, offering encouragement and motivation during challenging times. Their emotional support gives me the strength to keep going forward in the face of failures. They help to make the journey easier by lending support, offering guidance, or just being there to listen. Knowing that I am not alone in this journey, this constant encouragement enables me to concentrate on the creative and operational aspects of the business. And In the future, as the business grows, I plan to bring in additional artisans to help with production and expand the brand’s reach. With a dedicated team that shares the same vision and passion, we aim to create a sustainable and successful business built on craftsmanship and environmental responsibility.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="text-slideshow">
+    <div class="slideshow-inner">
+      
+      <div class="slideshow-text fade-text">
+        <h2>MISSION</h2>
+        <p>We are committed to create high-quality products made from natural materials, specifically coconut shells, while actively contributing to environmental preservation through recycling initiatives. Our mission is to foster a love for nature by offering eco-friendly alternatives to everyday fashion items.</p>
+      </div>
+
+      <div class="slideshow-text fade-text">
+        <h2>VISION</h2>
+        <p>To establish the standard for sustainable fashion by encouraging eco-awareness and creativeness through the use of recycled materials, and motivating others to conserve and protect the environment.</p>
+      </div>
+
+      <div class="slideshow-text fade-text">
+        <h2>TAG LINE</h2>
+        <p>"The magic touch of Coco."</p>
+      </div>
+
+      <a class="prev" onclick="changeSlide(-1)">❮</a>
+      <a class="next" onclick="changeSlide(1)">❯</a>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+  
+    function showSlides() {
+      let slides = document.getElementsByClassName("slideshow-text");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+    
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000);
+    }
+  </script>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box about">
+        <h3>CRUSINA’S HANDICRAFTS</h3>
+        <p>
+          Crusina’s Handicrafts creates eco-friendly bags made from recycled coconut shells. Each product is handcrafted with care to promote sustainability, Filipino craftsmanship, and environmental responsibility.
+        </p>
+      </div>
+      
+      <div class="footer-box">
+        <img src="./logo img/medal.png" alt="Handcrafted Quality">
+        <h4>HANDCRAFTED QUALITY</h4>
+        <p>
+          Every bag is carefully handmade using natural materials to ensure durability, beauty, and uniqueness.
+        </p>
+      </div>
+    
+      <div class="footer-box">
+        <img src="./logo img/recycle.png" alt="Eco Friendly">
+        <h4>ECO-FRIENDLY MATERIALS</h4>
+        <p>
+          We use recycled coconut shells and local fabrics to reduce waste and protect our environment.
+        </p>
+      </div>
+
+      <div class="footer-box">
+        <img src="./logo img/call-center.png" alt="Customer Support">
+        <h4>TRUSTED SERVICE</h4>
+        <p>
+          We ensure quality products and customer satisfaction in every order you make with us.
+        </p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Crusina’s Handicrafts. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

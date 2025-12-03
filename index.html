@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crusina's Handicrafts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/modern-neon" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/schuyler-script" rel="stylesheet">
+                
+
+</head>
+<body>
+  <div class="background"></div>
+  <div class="navbar">
+    <div class="logo">
+      <img src="./logo img/RFh9slqW.jpg" alt="crusina Logo" class="logo-img" />
+        CocoCrafts
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="items.html">Items</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav-login">
+      <label for="login-toggle" class="login-nav-btn">Login</label>
+    </div>
+  </div>
+  
+  <input type="checkbox" id="login-toggle" hidden>
+  <div class="login-popup">
+    <div class="login-container">
+      <div class="login-card-popup">
+        <label for="login-toggle" class="close-btn">×</label>
+        <h2>LOGIN</h2>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <a href="home.html" class="popup-login-btn">LOGIN</a>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+        
+      <div class="login-side-panel">
+        <h3>Don't<br>have<br>an<br>account?</h3>
+        <p>“Be part of our <br> creative community!”</p>
+        <a href="register.html" class="register-side-btn">Register</a>
+      </div>
+    </div>
+  </div>
+    
+  <div class="center">
+    <div class="heading-with-image">
+        <h1>CRUSINA'S HANDICRAFTS</h1>
+        <img src="./logo img/coconut.png" class="moving-image" alt="Moving Coco">
+    </div>
+  </div>
+
+       
+  <section class="menu-section">
+    <h1 class="popular">Popular Items</h1>
+    <p class="text">
+      Cocoshell handmade crafts are among our most popular best-sellers, loved for their natural elegance and eco-friendly charm. Each piece is carefully shaped from real coconut shell, giving every item its own unique texture, pattern, and character. From finely polished accessories to beautifully crafted home décor, these cocoshell creations stand out as functional, stylish, and sustainably made treasures. Customers can’t get enough of their island-inspired warmth and the authentic craftsmanship that makes every item truly one of a kind.
+    </p>
+    
+    <div class="menu-grid">
+      <div class="item">
+        <div class="circular">
+          <img src="./images/cup.jpg" alt="1">
+        </div>
+        <div class="menu-card">
+          <h2>Coco Tea Items</h2>
+          <p>"Our Coco tea items bring a touch of charm and warmth to every tea time."</p>
+        </div>
+      </div>
+      
+      <div class="item">
+        <div class="circular">
+          <img src="./images/7.jpg" alt="2">
+        </div>
+        <div class="menu-card">
+          <h2>Coco Keychain</h2>
+          <p>"The Coco keychains are cute and collectible, making them perfect for everyday use or as gifts."</p>
+        </div>
+      </div>
+      
+      <div class="item">
+        <div class="circular">
+          <img src="./images/2.jpg" alt="3">
+        </div>
+        <div class="menu-card">
+          <h2>Coco Serving-Spoon</h2>
+            <p>"The Coco serving spoon is a favorite for its elegant design and practical use in every kitchen."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="stat-box">
+      <img src="logo img/global-network.png" class="stat-icon">
+      <h1 class="counter" data-target="10">0</h1>
+      <p>PLACES OF EVENTS</p>
+    </div>
+
+    <div class="stat-box">
+      <img src="logo img/calendar.png" class="stat-icon">
+      <h1 class="counter" data-target="15">0</h1>
+      <p>YEARS OF EXPERIENCE</p>
+    </div>
+
+    <div class="stat-box">
+      <img src="logo img/fruit.png" class="stat-icon">
+      <h1 class="counter" data-target="50">0</h1>
+      <p>ITEMS</p>
+    </div>
+  </section>
+
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      let start = 0;
+      const target = +counter.getAttribute('data-target');
+      const speed = 80; // lower = faster
+      
+      const updateCount = () => {
+        const increment = target / speed;
+        start += increment;
+
+        if (start < target) {
+          counter.innerText = Math.ceil(start);
+          setTimeout(updateCount, 40);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  </script>
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box about">
+        <h3>CRUSINA’S HANDICRAFTS</h3>
+        <p>
+          Crusina’s Handicrafts creates eco-friendly bags made from recycled coconut shells. Each product is handcrafted with care to promote sustainability, Filipino craftsmanship, and environmental responsibility.
+        </p>
+      </div>
+
+      <div class="footer-box">
+        <img src="./logo img/medal.png" alt="Handcrafted Quality">
+        <h4>HANDCRAFTED QUALITY</h4>
+        <p>
+          Every bag is carefully handmade using natural materials to ensure durability, beauty, and uniqueness.
+        </p>
+      </div>
+
+      <div class="footer-box">
+        <img src="./logo img/recycle.png" alt="Eco Friendly">
+        <h4>ECO-FRIENDLY MATERIALS</h4>
+        <p>
+          We use recycled coconut shells and local fabrics to reduce waste and protect our environment.
+        </p>
+      </div>
+
+      <div class="footer-box">
+        <img src="./logo img/call-center.png" alt="Customer Support">
+        <h4>TRUSTED SERVICE</h4>
+        <p>
+         We ensure quality products and customer satisfaction in every order you make with us.
+        </p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Crusina’s Handicrafts. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

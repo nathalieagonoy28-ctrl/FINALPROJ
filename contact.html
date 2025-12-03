@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="navbar">
+    <div class="logo">
+      <img src="./logo img/RFh9slqW.jpg" alt="crusina Logo" class="logo-img" />
+        CocoCrafts
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="items.html">Items</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav-login">
+      <label for="login-toggle" class="login-nav-btn">Login</label>
+    </div>
+  </div>
+  
+  <input type="checkbox" id="login-toggle" hidden>
+  <div class="login-popup">
+    <div class="login-container">
+      <div class="login-card-popup">
+        <label for="login-toggle" class="close-btn">×</label>
+        <h2>LOGIN</h2>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <a href="home.html" class="popup-login-btn">LOGIN</a>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+        
+      <div class="login-side-panel">
+        <h3>Don't<br>have<br>an<br>account?</h3>
+        <p>“Be part of our <br> creative community!”</p>
+        <a href="register.html" class="register-side-btn">Register</a>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="center">
+    <div class="heading-with-image"></div>
+    <h1>VISIT US</h1>
+    <p>
+      At Cruzina’s Handcraft, every product is made with passion, patience,  
+      and true Filipino craftsmanship using eco-friendly coco shells.
+    </p>
+  </section>
+
+  <section class="address">
+    <h2>ADDRESS</h2>
+    <div class="address-layout">
+      
+      <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="images/LOC.jpg">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/PL.jpg">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/p.jpg">
+      </div>
+
+      <div class="dots-holder">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+    </div>
+
+    <div class="address-right">
+
+      <img src="logo img/Screenshot 2025-11-27 183727.png" class="side-image">
+
+      <a href="https://www.google.com/maps/search/Sitio+Namnama+Saud+pagudpud+Ilocos+Norte/@18.5936091,120.7853079,14.4z?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" class="visit-btn">
+        Visit Our Location
+      </a>
+
+      <p class="below-text">
+        Visit our shop and experience how coco-shell crafts are made.
+        Discover handmade eco-friendly products created with Filipino pride.
+      </p>
+
+    </div>
+  </section>
+
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+
+      <form class="contact-form">
+        <label>Full Name</label>
+        <input type="text" placeholder="Your full name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com" required>
+
+        <label>Message</label>
+        <textarea placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="reach-us">
+    <h2>REACH US</h2>
+    <p>
+      For inquiries, orders, or partnerships, feel free to contact us through phone, email,
+      or our social media pages.
+    </p>
+
+    <div class="social-icons">
+      <a href="#"><img src="logo img/facebook(1).png"></a>
+      <a href="#"><img src="logo img/gmail.png"></a>
+      <a href="#"><img src="logo img/phone-call.png"></a>
+    </div>
+  </section>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+
+      setTimeout(showSlides, 4000);
+    }
+  </script>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box about">
+        <h3>CRUSINA’S HANDICRAFTS</h3>
+        <p>
+          Crusina’s Handicrafts creates eco-friendly bags made from recycled coconut shells. Each product is handcrafted with care to promote sustainability, Filipino craftsmanship, and environmental responsibility.
+        </p>
+      </div>
+      
+      <div class="footer-box">
+        <img src="./logo img/medal.png" alt="Handcrafted Quality">
+        <h4>HANDCRAFTED QUALITY</h4>
+        <p>
+          Every bag is carefully handmade using natural materials to ensure durability, beauty, and uniqueness.
+        </p>
+      </div>
+      
+      <div class="footer-box">
+        <img src="./logo img/recycle.png" alt="Eco Friendly">
+        <h4>ECO-FRIENDLY MATERIALS</h4>
+        <p>
+          We use recycled coconut shells and local fabrics to reduce waste and protect our environment.
+        </p>
+      </div>
+
+      <div class="footer-box">
+        <img src="./logo img/call-center.png" alt="Customer Support">
+        <h4>TRUSTED SERVICE</h4>
+        <p>
+          We ensure quality products and customer satisfaction in every order you make with us.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Crusina’s Handicrafts. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
